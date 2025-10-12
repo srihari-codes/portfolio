@@ -1,8 +1,14 @@
-import AceTernityLogo from "@/components/logos/aceternity";
+﻿import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowDownUpIcon, ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
+import {
+  ArrowDownUpIcon,
+  ArrowUpRight,
+  ExternalLink,
+  Link2,
+  MoveUpRight,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -242,55 +248,55 @@ const PROJECT_SKILLS = {
     title: "OpenAI",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI"/>,
+    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI" />,
   },
   netlify: {
     title: "Netlify",
     bg: "black",
     fg: "white",
-    icon: <SiNetlify/>,
+    icon: <SiNetlify />,
   },
   html: {
     title: "HTML5",
     bg: "black",
     fg: "white",
-    icon: <SiHtml5/>,
+    icon: <SiHtml5 />,
   },
   css: {
     title: "CSS3",
     bg: "black",
     fg: "white",
-    icon: <SiCss3/>,
+    icon: <SiCss3 />,
   },
   bootstrap: {
     title: "Bootstrap",
     bg: "black",
     fg: "white",
-    icon: <SiBootstrap/>,
+    icon: <SiBootstrap />,
   },
   maven: {
     title: "Maven",
     bg: "black",
     fg: "white",
-    icon: <SiApachemaven/>,
+    icon: <SiApachemaven />,
   },
   java: {
     title: "Java",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/icons8-java.svg" alt="Java"/>,
+    icon: <img src="assets/icons/icons8-java.svg" alt="Java" />,
   },
   cplusplus: {
     title: "C++",
     bg: "black",
     fg: "white",
-    icon: <SiCplusplus/>,
+    icon: <SiCplusplus />,
   },
   arduino: {
     title: "Arduino",
     bg: "black",
     fg: "white",
-    icon: <SiArduino/>,
+    icon: <SiArduino />,
   },
 };
 export type Project = {
@@ -769,26 +775,34 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. AI Docker file optimizer project
+  {
+    // 01. AI Docker file optimizer project
     id: "aidockerfileoptimizer",
     category: "AI and DevOps",
     title: "AI Dockerfile Optimizer",
     src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
     screenshots: ["1.png", "2.png", "3.png"],
     live: "https://ai-docker-file-optimizer.netlify.app/",
-    github:"https://github.com/Abhiz2411/AI-Docker-file-optimizer",
+    github: "https://github.com/Abhiz2411/AI-Docker-file-optimizer",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.openai,PROJECT_SKILLS.netlify],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
+      backend: [PROJECT_SKILLS.openai, PROJECT_SKILLS.netlify],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller, more efficient images. 
-            Simply paste your Dockerfile, and the app analyzes it for best practices and size 
-            optimization tips. It then provides a refactored, optimized version of the Dockerfile. 
-            Deployed on Vercel, it ensures fast and easy access to Dockerfile optimization.
+            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller,
+            more efficient images. Simply paste your Dockerfile, and the app
+            analyzes it for best practices and size optimization tips. It then
+            provides a refactored, optimized version of the Dockerfile. Deployed
+            on Vercel, it ensures fast and easy access to Dockerfile
+            optimization.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -802,7 +816,8 @@ const projects: Project[] = [
       );
     },
   },
-  { // 02. FinanceMe project
+  {
+    // 02. FinanceMe project
     id: "financeme",
     category: "DevOps in Banking and Finance",
     title: "FinanceMe: Complete DevOps Capstone Project",
@@ -830,19 +845,19 @@ const projects: Project[] = [
             FinanceMe: Complete DevOps Capstone Project
           </TypographyP>
           <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic 
-            architecture to a microservice-based architecture to handle increased traffic and 
-            scaling challenges. The project involves automating infrastructure provisioning, build 
-            and deployment processes, and continuous monitoring using modern DevOps tools and 
-            AWS services.?
+            This project demonstrates the deployment of a DevOps pipeline for a
+            global banking and financial services provider, FinanceMe. The
+            company transitioned from a monolithic architecture to a
+            microservice-based architecture to handle increased traffic and
+            scaling challenges. The project involves automating infrastructure
+            provisioning, build and deployment processes, and continuous
+            monitoring using modern DevOps tools and AWS services.?
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
           <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
+            The project is divided into three main phases: 1.Automating
+            Infrastructure Provisioning 2.Build and Deployment Automation
             3.Continuous Monitoring
           </p>
           <SlideShow
@@ -851,13 +866,15 @@ const projects: Project[] = [
               `${BASE_PATH}/financeme/2.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">
+            Automating Infrastructure Provisioning
+          </TypographyH3>
           <p className="font-mono mb-2">
-          Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
+            Terraform is used to create 4 AWS EC2 instances: Jenkins Master Node
+            (for CI/CD pipeline management) Build Server (for application and
+            Docker image builds) Production Server (for deploying Dockerized
+            applications) Monitoring Server (for continuous monitoring of Build
+            and Prod servers)
           </p>
           <SlideShow
             images={[
@@ -865,13 +882,17 @@ const projects: Project[] = [
               `${BASE_PATH}/financeme/4.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">
+            Build and Deployment Automation
+          </TypographyH3>
 
           <p className="font-mono mb-2">
-          Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
+            Jenkins is configured for a CI/CD pipeline: Jenkins Master Node is
+            responsible for pipeline orchestration. Build Server is configured
+            as a Jenkins Slave Node to handle application builds and Docker
+            image creation. Ansible is used for automating deployment to the
+            Prod server, where the application is deployed using an Ansible
+            client-server model.
           </p>
           <SlideShow
             images={[
@@ -880,30 +901,37 @@ const projects: Project[] = [
               `${BASE_PATH}/financeme/7.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">
+            Continuous Monitoring{" "}
+          </TypographyH3>
           <p className="font-mono mb-2">
-          Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
+            Prometheus and Grafana are used for real-time monitoring: Node
+            Exporter is installed on both Build and Prod servers to collect
+            server metrics (CPU, Disk Space, Memory Utilization). Grafana
+            Dashboard is created to visualize these metrics for continuous
+            monitoring.
           </p>
-          <SlideShow images={[
-                `${BASE_PATH}/financeme/3.png`,
-                `${BASE_PATH}/financeme/8.png`,
-                `${BASE_PATH}/financeme/9.png`,
-                `${BASE_PATH}/financeme/10.png`,
-            ]} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/financeme/3.png`,
+              `${BASE_PATH}/financeme/8.png`,
+              `${BASE_PATH}/financeme/9.png`,
+              `${BASE_PATH}/financeme/10.png`,
+            ]}
+          />
         </div>
       );
     },
   },
-  { // 03. Portfolio project
+  {
+    // 03. Portfolio project
     id: "portfolio",
     category: "Portfolio",
     title: "My Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing.png",
     screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
-    live: "https://www.abhijitzende.com/",
-    github:"https://github.com/Abhiz2411/3D-interactive-portfolio",
+    live: "https://<<<PLACEHOLDER>>>",
+    github: "https://github.com/Abhiz2411/3D-interactive-portfolio",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -962,14 +990,15 @@ const projects: Project[] = [
       );
     },
   },
-  { // 04. Smart parking assitant
+  {
+    // 04. Smart parking assitant
     id: "smartparkingassitant",
     category: "IoT",
     title: "Smart Parking Assistant",
     src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
     screenshots: ["01.jpeg", "03.png"],
     live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github:"https://github.com/Abhiz2411/smart-parking-assistant",
+    github: "https://github.com/Abhiz2411/smart-parking-assistant",
     skills: {
       frontend: [PROJECT_SKILLS.python],
       backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
@@ -978,11 +1007,13 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino 
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI 
-            that visualizes availability and an intelligent system for quick, optimal decisions. 
-            Built to adapt with customizable hardware and Python-powered software for seamless 
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
+            Transform parking with the Smart Parking Assistant, an IoT marvel
+            powered by Arduino and IR sensors to detect and recommend the best
+            spots in real-time. Enjoy a sleek GUI that visualizes availability
+            and an intelligent system for quick, optimal decisions. Built to
+            adapt with customizable hardware and Python-powered software for
+            seamless integration. Say goodbye to parking woes and hello to
+            smarter space utilization!
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -996,27 +1027,43 @@ const projects: Project[] = [
       );
     },
   },
-  { // 05. Smart Job Tracker project
+  {
+    // 05. Smart Job Tracker project
     id: "smartjobtracker",
     category: "Full stack",
     title: "Smart Job Tracker",
     src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png","06.png","07.png"],
+    screenshots: [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.png",
+      "06.png",
+      "07.png",
+    ],
     live: "https://job-tracker-application-eight.vercel.app/",
-    github:"https://github.com/Abhiz2411/Job-tracker-application",
+    github: "https://github.com/Abhiz2411/Job-tracker-application",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
       backend: [PROJECT_SKILLS.firebase],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you 
-            manage, filter, and visualize your job search. Organize your applications with a 
-            Kanban board, monitor progress through status updates, and store everything securely. 
-            Enjoy seamless access across devices with a responsive design and email reminders for 
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
+            Track your job applications effortlessly with a sleek, dark-themed
+            app that lets you manage, filter, and visualize your job search.
+            Organize your applications with a Kanban board, monitor progress
+            through status updates, and store everything securely. Enjoy
+            seamless access across devices with a responsive design and email
+            reminders for interviews. A smarter, more intuitive way to stay on
+            top of your job hunt!
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -1034,27 +1081,34 @@ const projects: Project[] = [
       );
     },
   },
-  { // 06. Savinder Puri portfolio project
+  {
+    // 06. Savinder Puri portfolio project
     id: "savinderpurisportfolio",
     category: "Web Development",
     title: "Savinder Puri Portfolio",
     src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png"],
+    screenshots: ["01.png", "02.png", "03.png", "04.png", "05.png"],
     live: "https://savinder-puri.vercel.app/",
-    github:"https://github.com/Abhiz2411/savinder-puri",
+    github: "https://github.com/Abhiz2411/savinder-puri",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual 
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey, 
-            milestones, and life-changing services blending tech and spirituality. Built with 
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who 
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
+            Step into the digital world of Savinder Puri, the beloved DevOps
+            guru and Spiritual Alchemist, with this responsive portfolio
+            website. 🌐✨ Explore his inspiring journey, milestones, and
+            life-changing services blending tech and spirituality. Built with
+            modern tools like React and TypeScript, it’s a heartfelt tribute to
+            a mentor who transforms lives. 💻🕊️ Crafted with ❤️ by Srihari! 🚀
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow

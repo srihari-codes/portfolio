@@ -43,7 +43,7 @@ const PROJECTS = [
       "/assets/projects-screenshots/financeme/7.png",
       "/assets/projects-screenshots/financeme/8.png",
       "/assets/projects-screenshots/financeme/9.png",
-      "/assets/projects-screenshots/financeme/10.png"
+      "/assets/projects-screenshots/financeme/10.png",
     ],
   },
   {
@@ -51,7 +51,7 @@ const PROJECTS = [
     name: "Portfolio",
     description: `Welcome to my digital playground, where creativity meets code in the
             dopest way possible.`,
-    link: "https://www.abhijitzende.com/",
+    link: "https://<<<PLACEHOLDER>>>",
     images: [
       "/assets/projects-screenshots/myportfolio/landing.png",
       "/assets/projects-screenshots/myportfolio/navbar.png",
@@ -72,7 +72,6 @@ const PROJECTS = [
       "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
       "/assets/projects-screenshots/smartparkingassitant/03.jpeg",
       "/assets/projects-screenshots/smartparkingassitant/04.jpeg",
-
     ],
   },
 ];

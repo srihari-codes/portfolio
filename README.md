@@ -17,23 +17,28 @@ This project is **inspired** by the amazing work of [Naresh Khatri](https://gith
 Here are the key highlights of my portfolio:
 
 ### 🎹 **3D Interactive Animations**
+
 - Features a custom-made interactive keyboard built with **Spline**.
 - Each keycap represents a skill and reveals titles and descriptions on hover for an immersive experience.
 - Smooth, responsive 3D interactions that captivate visitors.
 
 ### ✨ **Slick Interactions & Animations**
+
 - Powered by **GSAP** and **Framer Motion**, delivering buttery-smooth animations on scroll, hover, and element reveals.
 - Creative motion designs that enhance storytelling and keep users engaged.
 
 ### 🌌 **Space-Themed Design**
+
 - Particles floating on a dark, cosmic background simulate an outer-space vibe.
 - Adds a unique and futuristic look to the portfolio.
 
 ### 📱 **Responsive Design**
+
 - Fully responsive layout ensures the website looks and functions beautifully on all devices.
 - Optimized for both desktop and mobile experiences.
 
 ### 🧠 **Innovative Web Design**
+
 - Combines cutting-edge technology with an intuitive user experience.
 - Creative use of animations and visuals to push the boundaries of modern web design.
 
@@ -48,30 +53,37 @@ The portfolio website is built using the following tools and technologies:
 ## 🌟 Getting Started
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/Abhiz2411/3D-interactive-portfolio.git
    ```
 
 2. Navigate to the project directory:
+
    ```bash
    cd 3D-interactive-portfolio
    ```
 
 3. Install dependencies:
+
    ```bash
    npm install
    ```
 
 4. Set up environment variables:
-   ```bash
-   # Create a .env.local file in the root directory
-   touch .env.local
 
-   # Add your Resend API key
-   RESEND_API_KEY=your_resend_api_key_here
+   ```powershell
+   # Create a .env.local file in the root directory (PowerShell)
+   New-Item -Path .env.local -ItemType File
+
+   # Add your credentials (replace placeholders when you are ready)
+   RESEND_API_KEY=<<<PLACEHOLDER>>>
+   TARGET_INBOX=<<<PLACEHOLDER>>>
+   NEXT_PUBLIC_WS_URL=<<<PLACEHOLDER>>>
    ```
 
 5. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -83,19 +95,23 @@ The portfolio website is built using the following tools and technologies:
 
 ## 🚀 Deployment
 
-This project is deployed using **Vercel** for its blazing-fast performance and ease of use. You can view the live site [here](https://www.abhijitzende.com/).
+This project is deployed using **Vercel** for its blazing-fast performance and ease of use.
 
 ### Setting up Resend API on Vercel
 
 1. Sign up for a [Resend](https://resend.com) account and get your API key
 2. Go to your Vercel project settings
 3. Navigate to the "Environment Variables" section
-4. Add a new environment variable:
+4. Add new environment variables:
    - Name: `RESEND_API_KEY`
-   - Value: Your Resend API key
+   - Value: `<<<PLACEHOLDER>>>`
+   - Name: `TARGET_INBOX`
+   - Value: `<<<PLACEHOLDER>>>`
+   - Name: `NEXT_PUBLIC_WS_URL`
+   - Value: `<<<PLACEHOLDER>>>`
 5. Save the changes and redeploy your application
 
-Note: Make sure to keep your API key secret and never commit it to your repository.
+Note: Replace the placeholders with your actual credentials before going live and never commit secrets to git.
 
 ## 💖 Acknowledgments
 
@@ -105,8 +121,8 @@ A huge shoutout to [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio) f
 
 Feel free to reach out to me for collaboration, feedback, or just to say hi! 😊
 
-- **Email:** abhijitzende75@gmail.com
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/zende-abhijit/)
+- **Email:** srihari221122@gmail.com
+- **LinkedIn:** [Srihari on LinkedIn](https://linkedin.com/in/iamsrihari)
 
 ---
 

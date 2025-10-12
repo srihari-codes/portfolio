@@ -1,9 +1,9 @@
 import { EmailTemplate } from "@/components/email-template";
-import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const TARGET_INBOX = process.env.TARGET_INBOX;
 
 const Email = z.object({
   fullName: z.string().min(2, "Full name is invalid!"),
@@ -12,6 +12,21 @@ const Email = z.object({
 });
 export async function POST(req: Request) {
   try {
+    if (!RESEND_API_KEY || RESEND_API_KEY.includes("<<<PLACEHOLDER>>>")) {
+      return Response.json(
+        { error: "Resend API key is not configured." },
+        { status: 500 }
+      );
+    }
+
+    if (!TARGET_INBOX || TARGET_INBOX.includes("<<<PLACEHOLDER>>>")) {
+      return Response.json(
+        { error: "Target inbox is not configured." },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(RESEND_API_KEY);
     const body = await req.json();
     console.log(body);
     const {
@@ -23,8 +38,8 @@ export async function POST(req: Request) {
       return Response.json({ error: zodError?.message }, { status: 400 });
 
     const { data: resendData, error: resendError } = await resend.emails.send({
-      from: "Porfolio <onboarding@resend.dev>",
-      to: [config.email],
+      from: "Portfolio <onboarding@resend.dev>",
+      to: [TARGET_INBOX],
       subject: "Contact me from portfolio",
       react: EmailTemplate({
         fullName: zodData.fullName,

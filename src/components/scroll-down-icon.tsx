@@ -23,19 +23,29 @@ const ScrollDownIcon = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
-          className="w-fit min-h-[50px] p-1 border-2 rounded-full border-gray-500 dark:border-white "
+          className="flex flex-col items-center gap-3"
         >
-          <motion.div
-            initial={{ y: 0 }}
-            animate={{ y: [0, 25], opacity: [1, 0] }}
-            transition={{
-              duration: 1,
-              ease: "easeOut",
-              repeat: Infinity,
-              repeatDelay: 1,
-            }}
-            className="w-3 h-3 rounded-full bg-gray-500 dark:bg-white"
-          />
+          <div className="w-fit min-h-[50px] p-1 border-2 rounded-full border-gray-500 dark:border-white">
+            <motion.div
+              initial={{ y: 0 }}
+              animate={{ y: [0, 25], opacity: [1, 0] }}
+              transition={{
+                duration: 1,
+                ease: "easeOut",
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              className="w-3 h-3 rounded-full bg-gray-500 dark:bg-white"
+            />
+          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+            className="text-sm font-medium tracking-wide text-gray-600 dark:text-gray-200"
+          >
+            Scroll to explore my work ↓
+          </motion.p>
         </motion.div>
       )}
     </AnimatePresence>

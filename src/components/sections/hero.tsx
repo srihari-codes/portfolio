@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
-import { File, Github, Linkedin } from "lucide-react";
+import { File } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -11,14 +11,17 @@ import {
 import { usePreloader } from "../preloader";
 import { BlurIn, BoxReveal } from "../reveal-animations";
 import ScrollDownIcon from "../scroll-down-icon";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 import { config } from "@/data/config";
 
 const HeroSection = () => {
   const { isLoading } = usePreloader();
+  const nameParts = config.author.trim().split(/\s+/).filter(Boolean);
+  const firstName = nameParts[0] ?? "";
+  const remainingName = nameParts.slice(1).join(" ");
 
   return (
-    <section id="hero" className={cn("relative w-full h-screen")}>
+    <section id="home" className={cn("relative w-full h-screen")}>
       <div className="grid md:grid-cols-2">
         <div
           className={cn(
@@ -51,9 +54,13 @@ const HeroSection = () => {
                           "cursor-default text-edge-outline font-display sm:text-7xl md:text-9xl "
                         )}
                       >
-                        {config.author.split(" ")[0]}
-                        <br className="md:block hiidden" />
-                        {config.author.split(" ")[1]}
+                        {firstName}
+                        {remainingName && (
+                          <>
+                            <br className="md:block hiidden" />
+                            {remainingName}
+                          </>
+                        )}
                         {/* PLEASE hello??
 
                         <br className="md:block hiidden" />
@@ -72,26 +79,26 @@ const HeroSection = () => {
                 <BlurIn delay={1.2}>
                   <p
                     className={cn(
-                      "md:self-start md:mt-4 font-thin text-md text-slate-500 dark:text-zinc-400 ml-3",
-                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                      "md:self-start md:mt-4 font-light text-md text-slate-600 dark:text-zinc-300 ml-3",
+                      "cursor-default sm:text-xl md:text-2xl max-w-xl leading-relaxed"
                     )}
                   >
-                    AI Enthusiast
+                    I’m Srihari — Cybersecurity student & Full-Stack Engineer. I
+                    build secure backend systems, automate the boring stuff, and
+                    chase vulnerabilities before they chase me.
                   </p>
                 </BlurIn>
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
-                  href={
-                    "https://drive.google.com/file/d/1vjtWfqYGMIMK_rlBnmDEpKco9MiEaQss/view"
-                  }
+                  href={config.resume ?? "#"}
                   target="_blank"
                   className="flex-1"
                 >
-                  <BoxReveal delay={2} width="100%" >
+                  <BoxReveal delay={2} width="100%">
                     <Button className="flex items-center gap-2 w-full">
                       <File size={24} />
-                      <p>Resume</p>
+                      <p>Download CV</p>
                     </Button>
                   </BoxReveal>
                 </Link>
@@ -103,7 +110,7 @@ const HeroSection = () => {
                           variant={"outline"}
                           className="block w-full overflow-hidden"
                         >
-                          Hire Me
+                          Let's build something secure.
                         </Button>
                       </Link>
                     </TooltipTrigger>
@@ -111,20 +118,13 @@ const HeroSection = () => {
                       <p>pls 🥹 🙏</p>
                     </TooltipContent>
                   </Tooltip>
-                  <Link
-                    href={config.social.github}
-                    target="_blank"
-                  >
-                    <Button variant={"outline"}>
-                      <SiGithub size={24} />
-                    </Button>
-                  </Link>
-                  <Link
-                    href={config.social.linkedin}
-                    target="_blank"
-                  >
-                    <Button variant={"outline"}>
-                      <SiLinkedin size={24} />
+                  <Link href={config.social.github} target="_blank">
+                    <Button
+                      variant={"outline"}
+                      className="flex items-center gap-2"
+                    >
+                      <SiGithub size={20} />
+                      <span>View GitHub</span>
                     </Button>
                   </Link>
                 </div>

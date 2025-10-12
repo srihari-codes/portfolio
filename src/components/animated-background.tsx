@@ -144,6 +144,7 @@ const AnimatedBackground = () => {
     } else {
       if (!selectedSkill || selectedSkill.name !== e.target.name) {
         const skill = SKILLS[e.target.name as SkillNames];
+        if (!skill) return;
         setSelectedSkill(skill);
       }
     }
