@@ -10,9 +10,9 @@ function Footer() {
     <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t border-border px-4 py-6 sm:flex-row md:px-6 sm:justify-between">
       <p className="text-xs text-gray-500 dark:text-gray-400">
         © 2025 {config.author}. All rights reserved.
-        <span className="block sm:inline sm:ml-2" aria-hidden="true">
+        {/* <span className="block sm:inline sm:ml-2" aria-hidden="true">
           Made with ☕, 💻 & Kali Linux.
-        </span>
+        </span> */}
       </p>
       <SocialMediaButtons />
       <nav className="flex gap-4 sm:gap-6 z-10">
