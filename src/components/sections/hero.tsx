@@ -48,30 +48,28 @@ const HeroSection = () => {
                 <BlurIn delay={1}>
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
-                      <h1
-                        className={cn(
-                          "font-thin text-6xl text-transparent text-slate-800 ml-1 text-left",
-                          "cursor-default text-edge-outline font-display sm:text-7xl md:text-9xl "
-                        )}
-                      >
-                        {firstName}
-                        {remainingName && (
-                          <>
-                            <br className="md:block hiidden" />
-                            {remainingName}
-                          </>
-                        )}
-                        {/* PLEASE hello??
-
-                        <br className="md:block hiidden" />
-                        UNMUTE ME 😢😢 */}
-                      </h1>
+                      <div>
+                        <h1
+                          className={cn(
+                            "font-thin text-6xl text-transparent text-slate-800 ml-1 text-left",
+                            "cursor-default text-edge-outline font-display sm:text-7xl md:text-9xl "
+                          )}
+                        >
+                          {firstName}
+                          {remainingName && (
+                            <>
+                              <br className="md:block hiidden" />
+                              {remainingName}
+                            </>
+                          )}
+                        </h1>
+                      </div>
                     </TooltipTrigger>
                     <TooltipContent
                       side="top"
                       className="dark:bg-white dark:text-black"
                     >
-                      theres something waiting for you in devtools
+                      <p>there&apos;s something waiting for you in devtools</p>
                     </TooltipContent>
                   </Tooltip>
                 </BlurIn>
@@ -83,9 +81,7 @@ const HeroSection = () => {
                       "cursor-default sm:text-xl md:text-2xl max-w-xl leading-relaxed"
                     )}
                   >
-                    I’m Srihari — Cybersecurity student & Full-Stack Engineer. I
-                    build secure backend systems, automate the boring stuff, and
-                    chase vulnerabilities before they chase me.
+                    I’m Srihari — Cybersecurity student & Full-Stack Engineer.
                   </p>
                 </BlurIn>
               </div>
@@ -115,7 +111,7 @@ const HeroSection = () => {
                       </Link>
                     </TooltipTrigger>
                     <TooltipContent side="bottom">
-                      <p>pls 🥹 🙏</p>
+                      <p>shall we!</p>
                     </TooltipContent>
                   </Tooltip>
                   <Link href={config.social.github} target="_blank">

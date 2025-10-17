@@ -20,33 +20,33 @@ const EasterEggs = () => {
     if (typeof console !== "undefined") {
       console.clear();
       console.log(
-        "%cWhoa, look at you! 🕵️‍♂️\n" +
-          "You seem to have discovered the secret console! 🔍\n" +
-          "Want to see some magic? ✨\n" +
-          "Just type %cmy first name%c and hit enter! 🎩🐇",
-        //   "Just press the %c'n'%c key and watch the magic happen! 🪄",
-        "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:20px",
-        "color: #00FF00; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:20px",
+        "%cHey there, curious hacker! 🕵️‍♂️\n" +
+          "You just breached Srihari's console vault. 🔐\n" +
+          "Want to trigger a cyber-magic payload? ✨\n" +
+          "Type %cmy first name%c and hit enter to deploy. 🚀",
+        "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;",
+        "color: #00FF00; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;",
         "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;"
       );
 
-      ["naresh", "Naresh", "NARESH"].forEach((name) => {
+      ["srihari", "Srihari", "SRIHARI"].forEach((name) => {
         // @ts-ignore
         if (Object.hasOwn(window, name)) return;
         Object.defineProperty(window, name, {
           get() {
             console.log(
-              "%c✨ Abra Kadabra! ✨\n\n" +
-                "You just summoned the magic of Naresh! 🧙‍♂️\n" +
-                "What??? youre not impressed? Fine, but remember: With great power comes great responsibility! 💻⚡",
+              "%c⚡ Intrusion detected... just kidding! ⚡\n\n" +
+                "You just invoked Srihari's secret console incantation. 🧙‍♂️\n" +
+                "From automating workflows to probing pentest labs, this dev bends systems to his will. 🔐\n" +
+                "Stay curious, stay ethical, and keep building resilient tech! 💻⚔️",
 
               "color: #FF4500; font-size: 18px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:10px"
             );
 
             const timer = setTimeout(() => {
               console.log(
-                "%cPssttt! 🤫\n\n" +
-                  "Do you like cats?? 😺 If yes, then press 'n' on viewport and see what happens! 🐱✨",
+                "%cPsst! 👀\n\n" +
+                  "If cosmic felines are your vibe, press 'n' while the page is focused and watch the Spline-powered Nyan Cat fly by. 🐱✨",
                 "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;"
               );
               clearTimeout(timer);
