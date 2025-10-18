@@ -81,7 +81,8 @@ const HeroSection = () => {
                       "cursor-default sm:text-xl md:text-2xl max-w-xl leading-relaxed"
                     )}
                   >
-                    I’m Srihari — Cybersecurity student & Full-Stack Engineer.
+                    I&apos;m Srihari — Cybersecurity student & Full-Stack
+                    Engineer.
                   </p>
                 </BlurIn>
               </div>
@@ -106,7 +107,7 @@ const HeroSection = () => {
                           variant={"outline"}
                           className="block w-full overflow-hidden"
                         >
-                          Let's build something secure.
+                          Let&apos;s build something secure.
                         </Button>
                       </Link>
                     </TooltipTrigger>
