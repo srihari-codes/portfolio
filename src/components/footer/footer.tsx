@@ -17,12 +17,19 @@ function Footer() {
       <SocialMediaButtons />
       <nav className="flex gap-4 sm:gap-6 z-10">
         {footer.map((link, index) => {
-          const { title, href } = link;
+          const { title, href, download } = link;
 
           return (
             <Link
               className="text-xs underline-offset-4 hover:underline"
               href={href}
+              download={
+                download
+                  ? typeof download === "string"
+                    ? download
+                    : true
+                  : undefined
+              }
               key={`l_${index}`}
             >
               <Button variant={"link"}>{title}</Button>

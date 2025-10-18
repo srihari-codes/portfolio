@@ -53,10 +53,10 @@ const PROJECTS = [
             dopest way possible.`,
     link: "https://<<<PLACEHOLDER>>>",
     images: [
-      "/assets/projects-screenshots/myportfolio/landing.png",
-      "/assets/projects-screenshots/myportfolio/navbar.png",
-      "/assets/projects-screenshots/myportfolio/projects.png",
-      "/assets/projects-screenshots/myportfolio/project.png",
+      "<<<PLACEHOLDER_IMAGE_1>>>",
+      "<<<PLACEHOLDER_IMAGE_2>>>",
+      "<<<PLACEHOLDER_IMAGE_3>>>",
+      "<<<PLACEHOLDER_IMAGE_4>>>",
     ],
   },
   {

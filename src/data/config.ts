@@ -23,7 +23,7 @@ const config = {
   phone: "+91 9962408595",
   location: "Chennai, Tamil Nadu, India",
   site: "https://<<<PLACEHOLDER>>>",
-  resume: "https://<<<PLACEHOLDER>>>",
+  resume: "/Full-stack-developer-srihari-resume.pdf",
 
   get ogImg() {
     return "/assets/og-image-placeholder.jpg";

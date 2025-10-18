@@ -1,7 +1,8 @@
-const footer: { title: string; href: string }[] = [
+const footer: { title: string; href: string; download?: string | boolean }[] = [
   {
     title: "Resume",
-    href: "https://<<<PLACEHOLDER>>>",
+    href: "/Full-stack-developer-srihari-resume.pdf",
+    download: "Full-stack-developer-srihari-resume.pdf",
   },
   {
     title: "GitHub",

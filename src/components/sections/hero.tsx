@@ -89,7 +89,11 @@ const HeroSection = () => {
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
                   href={config.resume ?? "#"}
-                  target="_blank"
+                  download={
+                    config.resume
+                      ? "Full-stack-developer-srihari-resume.pdf"
+                      : undefined
+                  }
                   className="flex-1"
                 >
                   <BoxReveal delay={2} width="100%">
